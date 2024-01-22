@@ -4,13 +4,13 @@ import { useNavigate } from 'react-router-dom';
 function Appheader(){
     const navigate = useNavigate();
     return(
-        <nav> 
+        <nav className="sticky-top"> 
         <h2>MIXMATCH</h2>
         <div>
             <ul className="navbar">
                 <li>
                     <a href="home" className="active" onClick={()=> navigate ('/home')}>
-                        Home
+                        Home    
                     </a>
                 </li>
                 <li>

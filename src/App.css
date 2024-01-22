@@ -1,11 +1,10 @@
 html{
   margin: 0px;
   padding: 0px;
-    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
-  /* background-color: #fd5c63; */
-  /* background-image: url(https://w.wallhaven.cc/full/eo/wallhaven-eo773r.jpg); */
-  /* background-size: cover;
-  background-repeat: no-repeat; */
+  background: #ad5389;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 h1{
   font-family: 'Poppins', sans-serif;
