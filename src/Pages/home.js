@@ -11,7 +11,7 @@ function Home(){
             </div>
             <h1 className="home-class">MIXMATCH</h1>
             <p style={{
-                color: "black"
+                color: "white"
             }}>Wear Color with Confidence!</p>
         </section>
 
