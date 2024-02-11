@@ -1,9 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+body{
+
+}
+:root {
+  --color-primary: #f6aca2;
+  --color-secondary: #f49b90;
+  --color-tertiary: #f28b7d;
+  --color-quaternary: #f07a6a;
+  --color-quinary: #ee6352;
+  /*
+  --color-primary: #5192ED;
+  --color-secondary: #69A1F0;
+  --color-tertiary: #7EAEF2;
+  --color-quaternary: #90BAF5;
+  --color-quinary: #A2C4F5;
+  */
+}
+
 html{
   margin: 0px;
   padding: 0px;
-  background: #ad5389;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #FBFBFB
+  ;
+  height: 100vh;
 
 }
 h1{
@@ -18,11 +48,37 @@ h1{
 .home-class{
   font-family: 'Poppins', sans-serif;
   font-size: 90px;
-  display: flex;
+  margin-left: 30%;
+  /* display: flex;
   align-items: center;
+  justify-content: center; */
   color: rgb(0, 0, 0);
-  color: #fff;
+  color: "black";
   font-weight: bolder;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 190px;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
 
 .img-home{
@@ -30,7 +86,6 @@ h1{
   align-items: center;
   justify-content: center;
   height: 50%;
-  
 }
 
 .img-intro{
@@ -61,8 +116,8 @@ li{
   margin-left: 50px;
 }
 
-
 .web-page-layout{
+  position: relative;
   max-width: 1920px;
   width: 100%;
   height: 81vh;
@@ -71,6 +126,61 @@ li{
   flex-direction: column-reverse;
   box-sizing: border-box;
 } 
+
+.web-page-layout h2{
+  width: 100%;
+  color: "#000000";
+  font-size: 10em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-left: 50%;
+}
+
+.web-page-layout h2:nth-child(1){
+  color: transparent;
+  -webkit-text-stroke: 3px #03a9f4;
+}
+
+.web-page-layout h2:nth-child(2) {
+  color: #03a9f4;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
 
 #Welcome{
   outline: none;
@@ -110,7 +220,7 @@ nav{
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 600;
-  color: #fff;
+  color: black;
   font-family: 'Poppins', sans-serif;
   transition: 0.3s ease-in-out;
 }
@@ -146,7 +256,7 @@ form h1{
 form input, textarea{
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   margin: 20px auto;
   padding: 10px;
   font-family: "Poppins";
@@ -208,6 +318,7 @@ img{
 
 .img-container{
   display: flex;
+  align-items: center;
   object-fit: contain;
   min-width: 720px;
   column-gap: 20px;
@@ -222,4 +333,106 @@ img{
 
 .accordion-button{
   font-weight: bolder;
+}
+
+#accordionFlushExample{
+  background-color: black;
+}
+
+.intro-title {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: calc(2rem + 5vw);
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  /* color: transparent;
+  background-color: white;
+  background-clip: text; */
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.para{
+  margin: auto;
+  color: white;
+  font: 700 normal 2.5em 'tahoma';
+  text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+}
+
+li{
+  margin-top: 20px;
+  color: black;
+  font: 700 normal 2.5em 'tahoma';
+}
+
+.accordion-item{
+  font-size: 28px;
 }

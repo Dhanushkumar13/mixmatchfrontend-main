@@ -19,6 +19,7 @@ function Contact(){
             contactMessage: data.message
         })
         .then(res=>{
+            alert("Message has been sent")
             console.log(res.data)
         })
         .catch((err)=>{
@@ -34,14 +35,13 @@ function Contact(){
     }
     return(
         <form onSubmit={(e)=> handleSubmit(e)}> 
-            {/* method='post'onSubmit={handleSubmit} */}
             <h1>Contact <span> Us </span></h1>
             <input type="title" id="title"  onChange={(e)=>handleChange} value={Contact.title} placeholder="John"></input>
             <input type="email" id="email"  onChange={(e)=>handleChange} value={Contact.email} placeholder="example@gmail.com"></input>
             <input type="text" name="subject" id="subject"  onChange={(e)=>handleChange} value={Contact.subject} placeholder="Enter Subject"></input>
             <textarea name="message" id="message" cols="30" rows="10"  onChange={(e)=>handleChange} value={Contact.message} placeholder="Enter Message"/>
             <div>
-            <button type="submit" className="submit-btn">Send</button>
+            <button type="submit" className="submit-btn" style={{marginTop:"20px"}}>Send</button>
             </div>
         </form>
     )
