@@ -1,7 +1,6 @@
 import React from "react";
 import BasicButtons from "../Elements/BasicButtons";
 import { useNavigate } from 'react-router-dom';
-import Giphy from '../images/giphy.gif';
 
 function Landing(){
     const navigate = useNavigate();
