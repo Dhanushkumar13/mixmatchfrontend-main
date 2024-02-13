@@ -4,7 +4,7 @@ import home from './Pages/home';
 import intro from './Pages/intro';
 import select from './Pages/select';
 import contact from './Pages/contact';
-import landing from './Pages/landing';
+// import landing from './Pages/landing';
 import Appheader from './Components/Header/header';
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Route path='/intro' Component={intro}></Route>
       <Route path='/select'Component={select}></Route>
       <Route path='/contact'Component={contact}></Route>
-      <Route path='/'Component={landing}></Route>
+      {/* <Route path='/'Component={landing}></Route> */}
     </Routes>
   </div>
   );
