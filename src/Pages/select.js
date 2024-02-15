@@ -6,7 +6,7 @@ function Select() {
     const [select, setSelect] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/day')
+        fetch('https://backend-mix.onrender.com/api/day')
             .then((response) => response.json())
             .then((res) => {
                 if (res.result) {
